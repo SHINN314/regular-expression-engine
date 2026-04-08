@@ -19,5 +19,8 @@ def main():
     F_n = {3, 4}
 
     DFA = subset_construction(Q_n, Sigma_n, delta_n, I_n, F_n)
-    print(DFA)
-    
+    print(f"Q_d = {DFA[0]}")
+    print(f"Sigma_d = {DFA[1]}")
+    print(f"delta_d = {DFA[2]}")
+    print(f"Initial state of DFA = {DFA[3]}")
+    print(f"Accepting states of DFA = {DFA[4]}")
