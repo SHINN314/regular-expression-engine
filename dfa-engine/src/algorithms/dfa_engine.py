@@ -49,4 +49,4 @@ def subset_construction(Q, Sigma, delta, I, F):
 
             delta_d[(dfa_states[dstate], sigma)] = dfa_states[dnext] # DFA上の状態dfa_state[dstate]と文字sigmaを受け取って、別のDFA上の状態dfastates[dnext]に遷移
 
-        return Q_d, Sigma, delta_d, 0, F_d
+    return Q_d, Sigma, delta_d, 0, F_d
