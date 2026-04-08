@@ -1,6 +1,4 @@
-def main():
-    print("Hello from dfa-engine!")
-
+from scripts.exe_subset_construction import main
 
 if __name__ == "__main__":
     main()
