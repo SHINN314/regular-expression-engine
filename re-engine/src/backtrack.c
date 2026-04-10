@@ -16,15 +16,19 @@ int match (char *regexp, char *text) {
 
 int matchhere (char *regexp, char *text) {
     if (regexp[0] == '\0') {
+        // 空チェック(すべての文字列を受理する)
         return 1;
     }
     if (regexp[1] == '*') {
+        // 繰り返しチェック
         return matchstar(regexp[0], regexp + 2, text);
     }
     if (regexp[0] == '$' && regexp[1] == '\0') {
+        // 末尾チェック
         return *text == '\0';
     } 
     if (*text != '\0' && (regexp[0] == '.' || regexp[0] == *text)) {
+        // 任意の文字チェック
         return matchhere(regexp + 1, text + 1);
     }
 
